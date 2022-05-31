@@ -127,6 +127,7 @@ public class CalculatorTest {
 
 		// THEN
 		assertThat(actualDigits).containsExactlyInAnyOrder(9, 5, 8, 7);
+		@SuppressWarnings("unchecked")
 		Set<Integer> expectedDigits = (Set<Integer>) Stream.of(5, 7, 8, 9).collect(Collectors.toSet());
 		assertEquals(expectedDigits, actualDigits);
 	}
